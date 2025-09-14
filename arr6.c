@@ -1,30 +1,14 @@
 #include <stdio.h>
 
-int main()
- {
-    int n, i;
-    float array[100];
-
-    printf("Enter the number of elements (1 to 100): ");
-    scanf("%d", &n);
-
-    if (n < 1 || n > 100) {
-        printf("Invalid input. Please enter a number between 1 and 100.\n");
-        return 1;
-    }
-    printf("Enter %d numbers:\n", n);
-    for (i = 0; i < n; ++i) {
-        printf("Element %d: ", i + 1);
-        scanf("%f", &array[i]);
-    }
-    float min = array[0];
-    for (i = 1; i < n; ++i) {
-        if (array[i] < min) {
-            min = array[i];
-        }
+int main() 
+{
+    int arr[] = {10, 20, 30, 40, 50, 60, 70};
+    int length = sizeof(arr) / sizeof(arr[0]);
+    int sum = 0;
+    for (int i = 0; i < length*2; i += 2) {
+        sum += arr[i];
     }
 
-    printf("The smallest element is: %.2f\n", min);
-
+    printf("Sum of elements at even indices: %d\n", sum);
     return 0;
 }
