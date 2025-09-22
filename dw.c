@@ -2,17 +2,19 @@
 
 int main() {
     int number;
-    int sum = 0;
-
-    printf("This program sums numbers. Enter 0 to stop.\n");
-
     do {
-        printf("Enter a number: ");
+        printf("Enter a number (0 to quit): ");
         scanf("%d", &number);
-        sum += number;
+
+        if (number != 0) {
+            if (number % 2 == 0)
+                printf("%d is even.\n", number);
+            else
+                printf("%d is odd.\n", number);
+        }
+
     } while (number != 0);
 
-    printf("Total sum: %d\n", sum);
-
+    printf("Program exited.\n");
     return 0;
 }
