@@ -2,18 +2,25 @@
 
 int main() 
 {
-    int n, i, j;
+    int n, i, j, k;
 
     printf("Enter number of rows: ");
     scanf("%d", &n);
 
-    for (i = 0; i <= n; i++)
-     {        
+    for (i = 1; i <= n; i++)
+     {
+        
+        for (k = i; k < n; k++) 
+        {
+            printf(" ");
+        }
+
         for (j = 1; j <= i; j++) 
-        {  
+        {
             printf("%d ", j);
         }
-        printf("\n");                  
+
+        printf("\n");
     }
 
     return 0;
