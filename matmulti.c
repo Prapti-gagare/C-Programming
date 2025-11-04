@@ -8,12 +8,6 @@ int main()
     scanf("%d %d", &r1, &c1);
     printf("Enter rows and columns of second matrix: ");
     scanf("%d %d", &r2, &c2);
-    if (c1 != r2)
-     {
-        printf("Matrix multiplication not possible. Columns of first must equal rows of second.\n");
-        return 1;
-    }
-
     printf("Enter elements of first matrix:\n");
     for (int i = 0; i < r1; ++i)
      {
@@ -49,7 +43,7 @@ int main()
             }
         }
     }
-    printf("Resultant matrix:\n");
+    printf("Result matrix:\n");
     for (int i = 0; i < r1; ++i) 
     {
         for (int j = 0; j < c2; ++j) 
