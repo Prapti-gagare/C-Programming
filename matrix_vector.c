@@ -7,7 +7,7 @@ int main()
     printf("Enter number of rows and cols: ");
     scanf("%d%d", &m,&n);
 
-    int matrix[m][n], vector[n], result[m];
+    int matrix[m][n], vector[m], result[m];
 
     printf("Enter elements of the %d x %d matrix:\n", m, n);
     for (i = 0; i < m; i++) 
@@ -19,9 +19,9 @@ int main()
     }
 
     printf("Enter elements of the vector of size %d:\n", n);
-    for (i = 0; i < n; i++) 
+    for (j = 0; j < m; j++) 
     {
-        scanf("%d", &vector[i]);
+        scanf("%d", &vector[j]);
     }
 
     for (i = 0; i < m; i++) 
@@ -32,7 +32,7 @@ int main()
     for (i = 0; i < m; i++)
      {
         for (j = 0; j < n; j++) {
-            result[i] += matrix[i][j] * vector[j];
+            result[i] += matrix[i][j] * vector[i];
         }
     }
 
